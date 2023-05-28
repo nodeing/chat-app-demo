@@ -172,7 +172,10 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href="" target="_blank">
+            <a
+              href="https://niuma.top/article/ai/chatgpt/1.html"
+              target="_blank"
+            >
               <IconButton icon={<PayupIcon />} shadow />
             </a>
           </div>
