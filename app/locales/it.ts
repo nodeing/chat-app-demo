@@ -132,7 +132,7 @@ const it: LocaleType = {
     Usage: {
       Title: "Bilancio Account",
       SubTitle(used: any, total: any) {
-        return `Attualmente usato in questo mese $${used}, soglia massima $${total}`;
+        return `${used}`;
       },
       IsChecking: "Controllando...",
       Check: "Controlla ancora",

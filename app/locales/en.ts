@@ -150,7 +150,7 @@ const en: RequiredLocaleType = {
     Usage: {
       Title: "Account Balance",
       SubTitle(used: any, total: any) {
-        return `Used this month $${used}, subscription $${total}`;
+        return `There are still ${used}P points left unused`;
       },
       IsChecking: "Checking...",
       Check: "Check",

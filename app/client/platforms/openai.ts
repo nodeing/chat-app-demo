@@ -11,7 +11,7 @@ import { prettyObject } from "@/app/utils/format";
 
 export class ChatGPTApi implements LLMApi {
   public ChatPath = "v1/chat/completions";
-  public UsagePath = "dashboard/billing/usage";
+  public UsagePath = "dashboard/billing/credit_grants";
   public SubsPath = "dashboard/billing/subscription";
 
   path(path: string): string {
@@ -199,7 +199,7 @@ export class ChatGPTApi implements LLMApi {
     }
 
     const response = (await used.json()) as {
-      total_usage?: number;
+      total_available?: number;
       error?: {
         type: string;
         message: string;
@@ -214,8 +214,8 @@ export class ChatGPTApi implements LLMApi {
       throw Error(response.error.message);
     }
 
-    if (response.total_usage) {
-      response.total_usage = Math.round(response.total_usage) / 100;
+    if (response.total_available) {
+      response.total_available = Math.round(response.total_available) / 100;
     }
 
     if (total.hard_limit_usd) {
@@ -223,7 +223,7 @@ export class ChatGPTApi implements LLMApi {
     }
 
     return {
-      used: response.total_usage,
+      used: response.total_available,
       total: total.hard_limit_usd,
     } as LLMUsage;
   }

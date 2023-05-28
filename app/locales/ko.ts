@@ -130,7 +130,7 @@ const ko: LocaleType = {
     Usage: {
       Title: "계정 잔액",
       SubTitle(used: any, total: any) {
-        return `이번 달 사용액 ${used}, 구독액 ${total}`;
+        return `${used}P`;
       },
       IsChecking: "확인 중...",
       Check: "확인",

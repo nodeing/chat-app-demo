@@ -131,7 +131,7 @@ const tr: LocaleType = {
     Usage: {
       Title: "Hesap Bakiyesi",
       SubTitle(used: any, total: any) {
-        return `Bu ay kullanılan $${used}, abonelik $${total}`;
+        return `${used}P`;
       },
       IsChecking: "Kontrol ediliyor...",
       Check: "Tekrar Kontrol Et",

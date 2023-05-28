@@ -130,7 +130,7 @@ const vi: LocaleType = {
     Usage: {
       Title: "Hạn mức tài khoản",
       SubTitle(used: any, total: any) {
-        return `Đã sử dụng $${used} trong tháng này, hạn mức $${total}`;
+        return `${used}P`;
       },
       IsChecking: "Đang kiểm tra...",
       Check: "Kiểm tra",
