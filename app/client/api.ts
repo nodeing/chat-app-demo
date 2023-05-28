@@ -117,3 +117,10 @@ export function getHeaders() {
 
   return headers;
 }
+export function getBaseUrl() {
+  const accessStore = useAccessStore.getState();
+  let headers: Record<string, string> = {
+    "x-base-url": accessStore.baseUrl,
+  };
+  return headers;
+}
