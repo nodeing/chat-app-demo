@@ -5,7 +5,7 @@ const en: RequiredLocaleType = {
   WIP: "Coming Soon...",
   Error: {
     Unauthorized:
-      "Unauthorized access, please enter access code in settings page.",
+      "API KEY is incorrect or empty, please go to [Settings](/#/settings) page and enter the correct API KEY. If you don't have an API KEY, you can view the tutorial: [click here](https://niuma.top/article/ai/chatgpt/1.html).",
   },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} messages`,
@@ -206,7 +206,7 @@ const en: RequiredLocaleType = {
     Revert: "Revert",
   },
   Plugin: {
-    Name: "Plugin",
+    Name: "Tutorial",
   },
   Mask: {
     Name: "Mask",
