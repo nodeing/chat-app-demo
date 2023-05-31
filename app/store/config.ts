@@ -21,7 +21,7 @@ export const DEFAULT_CONFIG = {
   avatar: "1f603",
   fontSize: 14,
   theme: Theme.Light as Theme,
-  tightBorder: false,
+  tightBorder: true,
   sendPreviewBubble: true,
   sidebarWidth: 300,
 
@@ -153,6 +153,7 @@ export const useAppConfig = create<ChatConfigStore>()(
 
       update(updater) {
         const config = { ...get() };
+        console.log(config, 222);
         updater(config);
         set(() => config);
       },
