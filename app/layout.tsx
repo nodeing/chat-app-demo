@@ -8,7 +8,7 @@ const buildConfig = getBuildConfig();
 
 export const metadata = {
   title: "ChatGPT 国内稳定版",
-  description: "构建你的私人ai助手，提升工作效率.",
+  description: "构建你的私人AI助手，提升工作效率.",
   viewport: {
     width: "device-width",
     initialScale: 1,
